@@ -87,6 +87,6 @@ class Wunderground
   private
 
   def method_missing_match?(method)
-    method.to_s.end_with?("_for")
+    method.to_s.end_with?("_for") || method.to_s.match(/\d{8}$/)
   end
 end
